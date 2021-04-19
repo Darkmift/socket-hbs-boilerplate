@@ -9,4 +9,16 @@
         console.log(message)
     })
     console.log('{{ test }}')
+
+    async function fetchExample() {
+        try {
+            const response = await axios.get("/testUrl");
+            const data = await response.data;
+            console.log("🚀 ~ file: home.hbs ~ line 17 ~ fetchExample ~ data", data)
+
+        } catch (e) {
+            console.error(e)
+        }
+    }
+    fetchExample()
 </script>

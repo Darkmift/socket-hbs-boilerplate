@@ -31,6 +31,9 @@ app.set('view engine', 'hbs');
 app.get('/', function (req, res) {
     res.render('home', { test: 'working' });
 });
+app.get('/testUrl', function (req, res) {
+    res.json({ test: 'route working' });
+});
 
 //SOCKETS
 const { socketService } = require('./services/io.service');

@@ -36,11 +36,6 @@ app.get('/', function (req, res) {
 const { socketService } = require('./services/io.service');
 socketService(server);
 
-// ROUTES
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
-
 server.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 });

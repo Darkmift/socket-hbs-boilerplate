@@ -5,6 +5,8 @@ const express = require('express');
 const app = express();
 const cookieParser = require('cookie-parser');
 
+const axios = require('axios');
+
 const port = 8080;
 
 const http = require('http');
@@ -22,6 +24,17 @@ app.engine(
     exphbs({
         defaultLayout: 'main',
         extname: '.hbs',
+        helpers: {
+            fetch: async function (url) {
+                try {
+                    const res = await axios(url);
+                    console.log('🚀 ~ file: server.js ~ line 31 ~ res', res);
+                    return res.data;
+                } catch (error) {
+                    return error;
+                }
+            },
+        },
     })
 );
 

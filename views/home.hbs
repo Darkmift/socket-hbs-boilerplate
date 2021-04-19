@@ -12,7 +12,7 @@
 
     async function fetchExample() {
         try {
-            const response = await axios.get("/testUrl");
+            const response = await {{fetch "/testUrl"}};
             const data = await response.data;
             console.log("🚀 ~ file: home.hbs ~ line 17 ~ fetchExample ~ data", data)
 
@@ -20,5 +20,6 @@
             console.error(e)
         }
     }
+
     fetchExample()
 </script>

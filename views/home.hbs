@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>Example App: Home {{test}}</h1>
+</div>
+
+<script>
+    var socket = io();
+    socket.emit('chat message', 'sockets working');
+    socket.on('chat message', (message) => {
+        console.log(message)
+    })
+    console.log('{{ test }}')
+</script>

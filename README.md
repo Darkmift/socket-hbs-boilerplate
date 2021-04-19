@@ -2,6 +2,6 @@
 
 ### a basic boilerplate using:
 
-⋅⋅* socket.io
-⋅⋅* handlebars
-⋅⋅* axios
+* socket.io
+* handlebars
+* axios
